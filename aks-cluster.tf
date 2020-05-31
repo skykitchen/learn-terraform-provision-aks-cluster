@@ -12,10 +12,10 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "default" {
   name     = "${random_pet.prefix.id}-rg"
-  location = "West US 2"
+  location = "West Europe"
 
   tags = {
-    environment = "Demo"
+    environment = "GULF-AKS-DEMO"
   }
 }
 
@@ -43,7 +43,7 @@ resource "azurerm_kubernetes_cluster" "default" {
   }
 
   tags = {
-    environment = "Demo"
+    environment = "GULF-AKS-DEMO"
   }
 }
 
